@@ -1,11 +1,32 @@
 package result;
 
-public class Result {
+public abstract class Result {
 
 	public static long maxResultId=0;
 	public long resultId;
-	public int errorCode;
-	public String errorString;
+	
+	protected long generteResultId()
+	{
+		long Id=maxResultId;
+		maxResultId++;	
+		return Id;
+	}
+	
+	protected int errorCode;
+	
+	
+	/* Please register your new error code here
+	 * 
+	 * 0: Success, no error
+	 * 1: wrong command type
+	 * ...
+	 *
+	 *
+	 */
+	
+	protected String errorString;
+	
+	protected ResultType resultType;
 	
 	public enum ResultType {
 		DbCommandResult,
@@ -13,5 +34,8 @@ public class Result {
 	    QueryExecutorCommandResult	    
 	}
 	
-	public ResultType resultType;
+	public ResultType getresultType()
+	{
+		return resultType;		
+	}
 }

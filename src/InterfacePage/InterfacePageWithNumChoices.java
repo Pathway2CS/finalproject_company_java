@@ -2,15 +2,25 @@ package InterfacePage;
 
 import java.util.ArrayList;
 
+import command.Command;
+import command.Command.CommandName;
+import commands.CommandQueue;
+import commands.Commands;
 import result.InterfaceCommandResult;
 
 
 public class InterfacePageWithNumChoices extends InterfacePage {
 
-	public void run()
+	public Commands run()
 	{
-		showPage();
+		CommandQueue returnedCommands= new CommandQueue();
 		
+		showPage();
+		int userInput=takeNumInput();
+		returnedCommands.appendCommand(generateQueryExecutorCommand(userInput));
+		returnedCommands.appendCommand(generateSwitchToPageCommand(userInput));
+		
+		return returnedCommands;
 	}
 	
 	private ArrayList<String> preChoiceStrings;
@@ -19,7 +29,7 @@ public class InterfacePageWithNumChoices extends InterfacePage {
 	
 	
     private ArrayList<Long> nextPages; // Ids of all the next pages that may reach from this page 
-    private ArrayList<Long> queryExecutorCommands; // Ids of all the next pages that may reach from this page 
+    private ArrayList<CommandName> queryExecutorCommands; // Ids of all the next pages that may reach from this page 
 
     private void showPage()
 	{
@@ -51,9 +61,36 @@ public class InterfacePageWithNumChoices extends InterfacePage {
 	   }				
 	}
 	
-    private InterfaceCommandResult takeNumInput()
+    private int takeNumInput()
     {
-    	InterfaceCommandResult
+    	
+    	// take user input here, until valid input is given
+    	   	
+    	return 0;
+    	
+    }
+    
+    private Command generateQueryExecutorCommand(int userInput)
+    {
+    	if (queryExecutorCommands.size()==0)
+    		return null;
+    	else
+    	{
+    		
+    		switch (queryExecutorCommands.get(userInput-1))
+    		{
+    		case SearchEmployeeById:
+    			return CommandGenerator.
+    		
+    		}
+    		
+    		
+    	}
+    }
+    
+    private Command generateSwitchToPageCommand(int userInput)
+    {
+    	return null;
     	
     }
 	

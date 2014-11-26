@@ -1,12 +1,14 @@
 package InterfacePage;
 import java.util.ArrayList;
 
+import commands.Commands;
 
-public class InterfacePage {
+
+public abstract class InterfacePage {
 	public static long maxInterfacePageId;
 	public long interfacePageId;
 	
-	public void run(){};
+	public abstract Commands run();
 	
 	
 }

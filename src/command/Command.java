@@ -1,38 +1,61 @@
 package command;
 
 
-public class Command {
+public abstract class Command {
 	
 	static long maxCommandId;
 	
 	public long commandId;
 	
+	protected CommandType commandType;
+	
+	protected CommandName commandName;
+	
+	protected long generteCommandId()
+	{
+		long Id=maxCommandId;
+		maxCommandId++;	
+		return Id;
+	}
+	
 	public enum CommandType {
 	    InterfaceCommand, 
 	    QueryExecutorCommand, 
-	    DbCommand 
+	    DbCommand,
+	    RandomDataGeneratorCommand,
 	}
 	
 	/*
-	 * If you want to introduce new command, register it in CommandDictionary
-	 * 
-	 * 
+	 * If you want to introduce new command, register it here
 	 */
-	public enum CommandDictionary {
+	public enum CommandName {
 		// DbCommand:
 		StartInterface,
-		Exit,
+		ExitWithFinalCommit,
+		ExitWithoutFinalCommit,
 				
 		// InterfaceCommad
-		RunInterface,
 	    SwitchToPage, 
+	    DisplayTuples,
+	    PrintStringImmediately,
 	    
 	    // QueryExecutorCommand
-	    ShowEmployById,
-		ShowEmployBySalaryRange,		
+	    SearchEmployeeById,		
 		AddEmployee,		
 		DeleteEmployeeById,		
-		UpdateEmployeeById
+		UpdateEmpployeeById,
+		SearchEmployBySalaryRange,
+		RraiseSalaryForAllEmployee,
+	}
+	
+	public CommandType getCommandType()
+	{
+		return commandType;		
+	}
+	
+	public CommandName getCommandName()
+	{
+		return commandName;		
 	}
 		
 
