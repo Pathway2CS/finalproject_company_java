@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import Tuple.Employee;
 import Tuple.Tuple;
 import command.Command;
-import command.DisplayTuplesCommand;
+import command.DisplayEmployeesCommand;
 import command.ExitWithFinalCommitCommand;
 import command.ExitWithoutFinalCommitCommand;
 import command.PrintStringImmediatelyCommand;
@@ -28,8 +28,6 @@ public class CommandGenerator {
 		ExitWithoutFinalCommitCommand exitWithoutFinalCommitCommand= new ExitWithoutFinalCommitCommand(); 	
 		return exitWithoutFinalCommitCommand;
 	}
-	
-	
 	
 	
 	// Generate Interface Commands
@@ -58,15 +56,31 @@ public class CommandGenerator {
 		return null;
 	}
 	
-	public static Command generateDisplayEmployeesCommand(ArrayList<Tuple> toBeDisplayTuples)
+	public static Command generateDisplayEmployeesCommand(ArrayList<Employee> toBeDisplayEmployees)
 	{		
-		DisplayTuplesCommand displayTuplesCommand= new DisplayTuplesCommand(toBeDisplayTuples); 	
+		DisplayEmployeesCommand displayTuplesCommand= new DisplayEmployeesCommand(toBeDisplayEmployees); 	
 		return displayTuplesCommand;
 	}
 	
 	
 	// Generate Query Executor Commands
+	// Jeff:
+	public static Command generateAddEmployeeCommandByUserInput()
+	{			
+		return null;
+	}
+	
+	public static Command generateDeleteEmployeeByIdCommandByUserInput()
+	{			
+		return null;
+	}
+	
+	public static Command generateDeleteEmployeeByIdCommandByUserInput()
+	{			
+		return null;
+	}
 	
 	
+	// Generate Random Data Generator Command
 	
 }

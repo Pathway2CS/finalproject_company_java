@@ -1,10 +1,16 @@
 package Tuple;
 
+import schema.Schema;
+
+
+
 public abstract class Tuple {
 	
-	public static long maxTupleId;
-	public long tupleId;
+	protected static long maxTupleId;
+	protected long tupleId;
 	
-	public abstract void displayContent();
+	
+	public Schema schema;
+	public abstract void displayTuple();
 
 }

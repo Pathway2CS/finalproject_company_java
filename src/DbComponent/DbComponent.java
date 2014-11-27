@@ -1,7 +1,8 @@
 package DbComponent;
 
-import javax.naming.spi.DirStateFactory.Result;
 
+
+import result.Result;
 import command.Command;
 
 public abstract class DbComponent {

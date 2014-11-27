@@ -30,13 +30,13 @@ public abstract class Command {
 	 */
 	public enum CommandName {
 		// DbCommand:
-		StartInterface,
 		ExitWithFinalCommit,
 		ExitWithoutFinalCommit,
 				
 		// InterfaceCommad
+		StartInterface,
 	    SwitchToPage, 
-	    DisplayTuples,
+	    DisplayEmployees,
 	    PrintStringImmediately,
 	    
 	    // QueryExecutorCommand
@@ -44,8 +44,11 @@ public abstract class Command {
 		AddEmployee,		
 		DeleteEmployeeById,		
 		UpdateEmpployeeById,
-		SearchEmployBySalaryRange,
-		RraiseSalaryForAllEmployee,
+		SearchEmployeesBySalaryRange,
+		RraiseSalaryForAllEmployees,
+		
+		// RamdomEmployeeGeneratorCommand
+		GenerateRandomEmployees
 	}
 	
 	public CommandType getCommandType()

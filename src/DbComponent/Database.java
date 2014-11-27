@@ -1,7 +1,8 @@
 package DbComponent;
 
-import javax.naming.spi.DirStateFactory.Result;
 
+
+import result.Result;
 import command.Command;
 import command.Command.CommandType;
 import command.DbCommand;
@@ -27,7 +28,8 @@ public class Database extends DbComponent {
 	}
 
 	// error strings
-    public static String unexpectedError="UNEXEPECT ERROR HAPPEND. DATABASE WILL EXIT NOW";
+    public static String unexpectedError=   "UNEXEPECT ERROR HAPPEND. DATABASE WILL EXIT NOW";
+    public static String noResults=         "NO RESULTS FOUND";
 	
 	public Result executeCommand(Command command)
 	{
