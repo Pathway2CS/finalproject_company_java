@@ -65,6 +65,17 @@ public class CommandGenerator {
 	
 	// Generate Query Executor Commands
 	// Jeff:
+	
+	public static Command generateSearchEmployeeByIdCommandByUserInput()
+	{			
+		return null;
+	}
+	
+	public static Command generateSearchEmployeesBySalaryRangeByUserInput()
+	{			
+		return null;
+	}
+	
 	public static Command generateAddEmployeeCommandByUserInput()
 	{			
 		return null;
@@ -75,10 +86,17 @@ public class CommandGenerator {
 		return null;
 	}
 	
-	public static Command generateDeleteEmployeeByIdCommandByUserInput()
+	public static Command generateUpdateEmployeeByIdCommandByUserInput()
 	{			
 		return null;
 	}
+	
+	public static Command generateRaiseSalaryForAllEmployeesCommandByUserInput()
+	{			
+		return null;
+	}
+	
+	
 	
 	
 	// Generate Random Data Generator Command

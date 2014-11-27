@@ -23,7 +23,7 @@ public class Database extends DbComponent {
 	{
 		this.componentId=generteComponentId();
 		this.queryExecutor=new QueryExecutor(dataFileName);
-		this.randomDataGenerator=new RandomDataGenerator(dataFileName);
+		this.randomDataGenerator=new RandomDataGenerator();
 		this.commands = new CommandQueue();
 	}
 
