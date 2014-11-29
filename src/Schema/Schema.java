@@ -1,4 +1,4 @@
-package schema;
+package Schema;
 
 public class Schema {
 	

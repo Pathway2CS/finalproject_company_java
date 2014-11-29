@@ -1,6 +1,6 @@
 package Tuple;
 
-import schema.Schema;
+import Schema.Schema;
 
 
 

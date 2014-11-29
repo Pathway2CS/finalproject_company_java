@@ -2,13 +2,13 @@ package DbComponent;
 
 import java.util.ArrayList;
 
+import Command.Command;
+import Command.DisplayEmployeesCommand;
+import Command.SwithToPageCommand;
+import Commands.Commands;
 import InterfacePage.InterfacePage;
-import result.InterfaceCommandResult;
-import result.Result;
-import command.Command;
-import command.DisplayEmployeesCommand;
-import command.SwithToPageCommand;
-import commands.Commands;
+import Result.InterfaceCommandResult;
+import Result.Result;
 
 public class DbInterface extends DbComponent {
 	

@@ -1,17 +1,17 @@
-package commandGenerator;
+package CommandGenerator;
 
 
 import java.util.ArrayList;
 
+import Command.Command;
+import Command.DisplayEmployeesCommand;
+import Command.ExitWithFinalCommitCommand;
+import Command.ExitWithoutFinalCommitCommand;
+import Command.PrintStringImmediatelyCommand;
+import Command.StartInterfaceCommand;
+import Command.SwithToPageCommand;
 import Tuple.Employee;
 import Tuple.Tuple;
-import command.Command;
-import command.DisplayEmployeesCommand;
-import command.ExitWithFinalCommitCommand;
-import command.ExitWithoutFinalCommitCommand;
-import command.PrintStringImmediatelyCommand;
-import command.StartInterfaceCommand;
-import command.SwithToPageCommand;
 
 public class CommandGenerator {
 

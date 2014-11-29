@@ -2,11 +2,9 @@ package InterfacePage;
 
 import java.util.ArrayList;
 
-import command.Command;
-import command.Command.CommandName;
-import commands.CommandQueue;
-import commands.Commands;
-import result.InterfaceCommandResult;
+import Result.*;
+import Commands.*;
+import Command.*;
 
 
 public class InterfacePageWithNumChoices extends InterfacePage {
@@ -29,7 +27,7 @@ public class InterfacePageWithNumChoices extends InterfacePage {
 	
 	
     private ArrayList<Long> nextPages; // Ids of all the next pages that may reach from this page 
-    private ArrayList<CommandName> queryExecutorCommands; // Ids of all the next pages that may reach from this page 
+    private ArrayList<Command.CommandName> queryExecutorCommands; // Ids of all the next pages that may reach from this page 
 
     private void showPage()
 	{

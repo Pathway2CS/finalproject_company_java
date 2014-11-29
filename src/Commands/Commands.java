@@ -1,6 +1,6 @@
-package commands;
+package Commands;
 
-import command.Command;
+import Command.Command;
 
 public abstract class Commands {
 	

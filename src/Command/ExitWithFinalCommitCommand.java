@@ -1,7 +1,7 @@
-package command;
+package Command;
 
-import command.Command.CommandName;
-import command.Command.CommandType;
+import Command.Command.CommandName;
+import Command.Command.CommandType;
 
 public class ExitWithFinalCommitCommand extends DbCommand {
 	

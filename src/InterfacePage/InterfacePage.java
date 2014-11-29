@@ -1,7 +1,7 @@
 package InterfacePage;
 import java.util.ArrayList;
 
-import commands.Commands;
+import Commands.Commands;
 
 
 public abstract class InterfacePage {

@@ -1,7 +1,7 @@
-package result;
+package Result;
 
-import result.Result.ResultType;
-import commands.Commands;
+import Commands.Commands;
+import Result.Result.ResultType;
 
 public class InterfaceCommandResult extends Result {
 

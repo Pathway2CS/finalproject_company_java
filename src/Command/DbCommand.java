@@ -1,4 +1,4 @@
-package command;
+package Command;
 
 public class DbCommand extends Command {
 

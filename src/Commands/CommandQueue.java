@@ -1,8 +1,8 @@
-package commands;
+package Commands;
 
 import java.util.Queue;
 
-import command.Command;
+import Command.Command;
 
 public class CommandQueue extends Commands {
 

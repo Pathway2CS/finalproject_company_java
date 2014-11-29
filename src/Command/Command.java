@@ -1,4 +1,4 @@
-package command;
+package Command;
 
 
 public abstract class Command {
@@ -45,7 +45,7 @@ public abstract class Command {
 		DeleteEmployeeById,		
 		UpdateEmpployeeById,
 		SearchEmployeesBySalaryRange,
-		RraiseSalaryForAllEmployees,
+		RaiseSalaryForAllEmployees,
 		
 		// RamdomEmployeeGeneratorCommand
 		GenerateRandomEmployees

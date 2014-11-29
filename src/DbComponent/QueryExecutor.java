@@ -1,7 +1,6 @@
 package DbComponent;
-
-import result.Result;
-import command.Command;
+import Command.Command;
+import Result.*;
 
 public class QueryExecutor extends DbComponent {
 	

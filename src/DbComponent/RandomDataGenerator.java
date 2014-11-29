@@ -1,8 +1,8 @@
 package DbComponent;
 
-import javax.naming.spi.DirStateFactory.Result;
 
-import command.Command;
+import Command.Command;
+import Result.*;
 
 public class RandomDataGenerator extends DbComponent {
 	

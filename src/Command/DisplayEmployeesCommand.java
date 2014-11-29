@@ -1,11 +1,11 @@
-package command;
+package Command;
 
 import java.util.ArrayList;
 
+import Command.Command.CommandName;
+import Command.Command.CommandType;
 import Tuple.Employee;
 import Tuple.Tuple;
-import command.Command.CommandName;
-import command.Command.CommandType;
 
 public class DisplayEmployeesCommand extends InterfaceCommand {
 	

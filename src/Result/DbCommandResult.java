@@ -1,6 +1,6 @@
-package result;
+package Result;
 
-import result.Result.ResultType;
+import Result.Result.ResultType;
 
 public class DbCommandResult extends Result{
 

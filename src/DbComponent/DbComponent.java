@@ -2,8 +2,8 @@ package DbComponent;
 
 
 
-import result.Result;
-import command.Command;
+import Command.Command;
+import Result.Result;
 
 public abstract class DbComponent {
 	

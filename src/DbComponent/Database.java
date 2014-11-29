@@ -2,14 +2,14 @@ package DbComponent;
 
 
 
-import result.Result;
-import command.Command;
-import command.Command.CommandType;
-import command.DbCommand;
-import command.StartInterfaceCommand;
-import commandGenerator.CommandGenerator;
-import commands.CommandQueue;
-import commands.Commands;
+import Command.Command;
+import Command.DbCommand;
+import Command.StartInterfaceCommand;
+import Command.Command.CommandType;
+import CommandGenerator.CommandGenerator;
+import Commands.CommandQueue;
+import Commands.Commands;
+import Result.Result;
 
 public class Database extends DbComponent {
 	
