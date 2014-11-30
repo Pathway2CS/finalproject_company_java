@@ -1,6 +1,5 @@
 package DbComponent;
 
-
 import Command.Command;
 import Result.*;
 
