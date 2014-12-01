@@ -9,7 +9,7 @@ public class QueryExecutorCommandResult extends Result {
 
 	private ArrayList<Tuple> queryResults;
 	
-	QueryExecutorCommandResult()
+	public QueryExecutorCommandResult()
 	{
 		this.resultId=this.generteResultId();		
 		this.errorCode=0;
@@ -20,5 +20,9 @@ public class QueryExecutorCommandResult extends Result {
 	public ArrayList<Tuple> getQueryResults()
 	{
 		return queryResults;
+	}
+	
+	public void AddQueryResult(Tuple tuple) {
+		queryResults.add(tuple);
 	}
 }

@@ -38,4 +38,10 @@ public abstract class Result {
 	{
 		return resultType;		
 	}
+
+	public void setError(int code, String msg) {
+		this.errorCode = code;
+		this.errorString = msg;
+	}
+	
 }
