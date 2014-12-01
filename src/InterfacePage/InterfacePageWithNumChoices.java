@@ -18,45 +18,90 @@ public class InterfacePageWithNumChoices extends InterfacePage {
 	{
 		this.interfacePageId=interfacePageId;
 		
+	   /*
+		*
+		* This is the definition of the first page, with page Id equal to 1.
+		*
+		*/
 		if (interfacePageId==1)
 		{
 			preChoiceStrings.add("Welcome to Mini Employee Record Database");
 			preChoiceStrings.add("You can:");
 			
 			
-			choiceStrings.add("1: generate random records");
-			choiceStrings.add("2: add an employee");
-			choiceStrings.add("3: delete an employee");
-			choiceStrings.add("4: update employee info");
-			choiceStrings.add("5: show employees");
-			choiceStrings.add("6: raise salary for all employees");
+			choiceStrings.add("1: Generate random records");
+			choiceStrings.add("2: Add an employee");
+			choiceStrings.add("3: Delete an employee");
+			choiceStrings.add("4: Update employee info");
+			choiceStrings.add("5: Show employees");
+			choiceStrings.add("6: Raise salary for all employees");
 			choiceStrings.add("7: Exit");
-			
-			// next page for 1: generate random records
-			nextPages.add((long)1);
-			// next page for 2: add an employee
-			nextPages.add((long)1);
-			// next page for 3: delete an employee
-			nextPages.add((long)1);
-			// next page for 4: update employee info
-			nextPages.add((long)1);
-			// next page for 5: show employees
-			nextPages.add((long)2);
-			// next page for 6: raise salary for all employees
-			nextPages.add((long)1);
-			// next page for 7: Exit
-			nextPages.add((long)1);
 			
 			queryExecutorCommands=new HashMap<Integer, Command.CommandName>();
 			
+			// next page for 1: generate random records
+			nextPages.add((long)1);
 			// non interface command for 1: generate random records		
 			queryExecutorCommands.put(1, Command.CommandName.GenerateRandomEmployees);
 			
+			// next page for 2: add an employee
+			nextPages.add((long)1);
 			// non interface command for 2: add an employee ;
             queryExecutorCommands.put(2, Command.CommandName.AddEmployee);
-            
-            
 			
+			// next page for 3: delete an employee
+			nextPages.add((long)1);
+		    // non interface command for 3: delete an employee ;
+            queryExecutorCommands.put(3, Command.CommandName.DeleteEmployeeById);
+			
+			// next page for 4: update employee info
+			nextPages.add((long)1);
+			// non interface command for 3: delete an employee ;
+            queryExecutorCommands.put(4, Command.CommandName.UpdateEmpployeeById);
+			
+			// next page for 5: show employees
+			nextPages.add((long)2);
+			// no non-interface command corresponding to this choice
+			
+			// next page for 6: raise salary for all employees
+			nextPages.add((long)1);
+			// non-interface command for 6: raise salary for all employees
+			queryExecutorCommands.put(6, Command.CommandName.RaiseSalaryForAllEmployees);
+			
+			// next page for 7: Exit
+			nextPages.add((long)1);
+			// non-interface command for 6: raise salary for all employees
+			queryExecutorCommands.put(6, Command.CommandName.ExitWithFinalCommit);
+			
+		}
+		else if (interfacePageId==2)
+		{
+		 /*
+		  *
+		  * This is the definition of the show employee page, with page Id equal to 1.
+		  *
+		  */
+			
+			choiceStrings.add("1: Show employee by ID");
+			choiceStrings.add("2: Show employee by salary range");
+			choiceStrings.add("3: Back to main menu");
+			
+			queryExecutorCommands=new HashMap<Integer, Command.CommandName>();
+			
+			// next page for 1: show employee by ID
+			nextPages.add((long)2);
+			// non interface command for  1: show employee by ID	
+			queryExecutorCommands.put(1, Command.CommandName.SearchEmployeeById);
+			
+			// next page for 2: add an employee
+			nextPages.add((long)2);
+			// non interface command for 2: add an employee ;
+            queryExecutorCommands.put(2, Command.CommandName.SearchEmployeesBySalaryRange);
+			
+			// next page for 3:
+			nextPages.add((long)1);
+		    // no non interface command for 3: delete an employee ;
+ 			
 		}
 	}
 	
@@ -158,6 +203,9 @@ public class InterfacePageWithNumChoices extends InterfacePage {
     		case SearchEmployeeById:
     			return CommandGenerator.generateSearchEmployeeByIdCommandByUserInput();
     			
+    		case  SearchEmployeesBySalaryRange:
+    			return CommandGenerator.generateSearchEmployeesBySalaryRangeByUserInput();
+    			
     		case AddEmployee:
     			return CommandGenerator.generateAddEmployeeCommandByUserInput();
     		
@@ -171,7 +219,10 @@ public class InterfacePageWithNumChoices extends InterfacePage {
     			return CommandGenerator.generateRaiseSalaryForAllEmployeesCommandByUserInput();
     		
     		case GenerateRandomEmployees:
-    			return CommandGenerator.generateGenerateRandomEmployeeCommand();
+    			return CommandGenerator.generateGenerateRandomEmployeesCommandByUserInput();
+    			
+    		case ExitWithFinalCommit:
+    			return CommandGenerator.generateExitWithFinalCommitCommand();
     		
     		default:
     		    return null;		

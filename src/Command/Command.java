@@ -41,11 +41,12 @@ public abstract class Command {
 	    
 	    // QueryExecutorCommand
 	    SearchEmployeeById,		
+	    SearchEmployeesBySalaryRange,
 		AddEmployee,		
 		DeleteEmployeeById,		
-		UpdateEmpployeeById,
-		SearchEmployeesBySalaryRange,
+		UpdateEmpployeeById,		
 		RaiseSalaryForAllEmployees,
+	    Commit,
 		
 		// RamdomEmployeeGeneratorCommand
 		GenerateRandomEmployees

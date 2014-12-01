@@ -51,11 +51,7 @@ public class CommandGenerator {
 		return swithToPageCommand;
 	}
 	
-	public static Command generateSwitchToPageCommandByUserInput()
-	{		
-		return null;
-	}
-	
+
 	public static Command generateDisplayEmployeesCommand(ArrayList<Employee> toBeDisplayEmployees)
 	{		
 		DisplayEmployeesCommand displayTuplesCommand= new DisplayEmployeesCommand(toBeDisplayEmployees); 	
@@ -101,4 +97,8 @@ public class CommandGenerator {
 	
 	// Generate Random Data Generator Command
 	
+	public static Command generateGenerateRandomEmployeesCommandByUserInput()
+	{			
+		return null;
+	}
 }
