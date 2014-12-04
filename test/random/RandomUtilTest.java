@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import Tuple.Position;
+import data.Position;
 import random.RandomUtil;
 
 public class RandomUtilTest {
@@ -26,7 +26,7 @@ public class RandomUtilTest {
 	@Test
 	public void testRandomPosition() {
 		for (int i = 0; i < 100; i++) {
-			Tuple.Position p = RandomUtil.randomPosition();
+			data.Position p = RandomUtil.randomPosition();
 			assertTrue(Position.getDepartments().contains(p.getDepartment()));
 			assertTrue(Position.getPositions(p.getDepartment()).contains(p.getPosition()));
 		}		

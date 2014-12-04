@@ -1,8 +1,11 @@
 package random;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
-import Tuple.Position;
+import data.Employee;
+import data.Position;
 
 public class RandomUtil {
 	private static int[] departmentsCdf = {5, 8, 10};
@@ -12,9 +15,39 @@ public class RandomUtil {
 		{10}
 	};
 	
+	public static List<Employee> generateInitialEmployees(int numberOfEmployees) {
+		List<Employee> employees = new ArrayList<Employee>();
+		if (numberOfEmployees <= 0) {
+			throw new IllegalArgumentException(String.format(
+					"Number of employees to generate must to positive (found %d)", 
+					numberOfEmployees));
+		}
+		Employee.resetId();
+		for (int i = 0; i < numberOfEmployees; i++) {
+			employees.add(randomEmployee());
+		}
+		return employees;
+	}
+	
+	public static Employee randomEmployee() {
+		Position p = randomPosition();
+		return Employee.builder()
+				.id(Employee.nextId())
+				.name(randomName())
+				.birthday(randomDate())
+				.department(p.getDepartment())
+				.position(p.getPosition())
+				.salary(randomSalary())
+				.build();
+	}
+	
+	/**
+	 * Generate a salary between 50,000 to 1,000,000
+	 * @return a salary number
+	 */
 	public static int randomSalary() {
 		Random rand = new Random();
-		return (rand.nextInt(500) + 1) * 10000;
+		return (rand.nextInt(96) + 5) * 10000;
 	}
 	
 	/**
